@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.huongnguyen.spotifyapp">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.huongnguyen.spotifyapp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.huongnguyen.spotifyapp.AmbientActivity"
+            android:label="AmbientSongList"
+            android:parentActivityName="com.example.huongnguyen.spotifyapp.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.example.huongnguyen.spotifyapp.WorkoutActivity"
+            android:label="WorkoutSongList"
+            android:parentActivityName="com.example.huongnguyen.spotifyapp.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.example.huongnguyen.spotifyapp.DinnerActivity"
+            android:label="DinnerSongList"
+            android:parentActivityName="com.example.huongnguyen.spotifyapp.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.example.huongnguyen.spotifyapp.StudyActivity"
+            android:label="StudySongList"
+            android:parentActivityName="com.example.huongnguyen.spotifyapp.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.example.huongnguyen.spotifyapp.RoadTripActivity"
+            android:label="RoadTripSongList"
+            android:parentActivityName="com.example.huongnguyen.spotifyapp.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.example.huongnguyen.spotifyapp.SleepActivity"
+            android:label="SleepSongList"
+            android:parentActivityName="com.example.huongnguyen.spotifyapp.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity
+        android:name="com.example.huongnguyen.spotifyapp.PlaySongActivity"
+        android:label="PlaySong"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".AmbientActivity"/>
+        </activity>
+
+        <!-- Needed for LoginActivity to work -->
+        <activity
+            android:name="com.spotify.sdk.android.authentication.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+
+</manifest>
